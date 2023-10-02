@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Exercícios</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script lang="JavaScript">
+
+        function exer()
+        {
+            var s;
+
+            s = document.frm.txt.value;
+
+            v = new String;
+
+            i, cont = new Int;
+
+            contv = 0;
+            contc = 0;
+            conte = 0;
+
+
+            for(i = 0; i <= s.length; i++)
+            {
+                if( (s.charCodeAt(i) = 97)|| (s.charCodeAt(i) = 101) || (s.charCodeAt(i) = 105) || (s.charCodeAt(i) = 111) || (s.charCodeAt(i) = 117))
+                {
+                    contv++;
+                }
+            }
+
+            for(i = 0; i <= s.length; i++)
+            {
+                if( (s.charCodeAt(i) != 97) && (s.charCodeAt(i) != 101) && (s.charCodeAt(i) != 105) && (s.charCodeAt(i) != 111) && (s.charCodeAt(i) != 117))
+                {
+                    contc++;
+                }
+            }
+
+            for(i = 0; i <= s.length; i++)
+            {
+                if( (s.charCodeAt(i) < 65) || (s.charCodeAt(i) > 90) && (s.charCodeAt(i) < 97) || (s.charCodeAt(i) > 122) )
+                {
+                    conte++;
+                }
+            }
+        }
+
+        document.write("<table>")
+            document.write("<tr>")
+                document.write("<td>")
+
+                    document.write("Qt. de vogais")
+
+                document.write("</td>")
+
+                document.write("<td>")
+
+                document.write("</td>")
+            document.write("</tr>")
+            document.write("<tr>")
+                document.write("<td>")
+
+                    document.write("Qt. de consoantes")
+
+                document.write("</td>")
+
+                document.write("<td>")
+                    
+                document.write("</td>")
+            document.write("</tr>")
+            document.write("<tr>")
+                document.write("<td>")
+
+                    document.write("Qt. de dígitos")
+
+                document.write("</td>")
+
+                document.write("<td>")
+                    
+                document.write("</td>")
+            document.write("</tr>")
+            document.write("<tr>")
+                document.write("<td>")
+
+                    document.write("Qt. de caracteres especias")
+
+                document.write("</td>")
+
+                document.write("<td>")
+                    
+                document.write("</td>")
+            document.write("</tr>")
+        document.write("</table>")
+
+    </script>
+</head>
+<body>
+    <form name="frm">
+        <input type="text" name="txt">
+        <input type="button" value="clique" onclick="exer();">
+    </form>
+</body>
+</html>
